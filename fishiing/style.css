@@ -1,0 +1,444 @@
+    @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+     :root {
+        --background-color: #e4fdff;
+        --main-color: #394b3d;
+        --title-color: #c9d6e4;
+    }
+    
+    body {
+        background-color: black;
+        color: #ffff;
+        margin: 0;
+        font-family: 'Shantell Sans', cursive;
+        box-sizing: border-box;
+    }
+    
+    header {
+        background: url("images/20181015_121430.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 800px;
+        padding: 20px;
+        /* position: absolute; */
+    }
+    /* .container {
+    width: 1200px;
+    margin: 0 auto;
+} */
+    
+    .title {
+        position: absolute;
+        bottom: 0;
+        left: 200px;
+        font-size: 70px;
+    }
+    
+    .logo {
+        display: block;
+        padding: 20px;
+    }
+    
+    main {
+        background-color: #394b3d;
+    }
+    
+    .main-links {
+        display: flex;
+        min-width: 300px;
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }
+    
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px 0;
+        background-color: var(--main-color);
+        text-decoration: none;
+        text-align: center;
+        margin: 0;
+        font-size: 24px;
+    }
+    
+    .home {
+        width: 300px;
+        padding-left: 0;
+    }
+    
+    .main-container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    
+    .main-title {
+        /* display: block; */
+        margin-top: 0;
+        padding-top: 30px;
+        font-size: 55px;
+        text-align: center;
+    }
+    
+    .grid-item {
+        border: 1px solid rgb(17, 138, 67);
+    }
+    
+    .grid-container {
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: 200px 300px;
+        /* grid-auto-rows: minmax(150px, auto); */
+        grid-gap: 20px;
+        grid-template-areas: 'm m' 'a b' 'a b' 'n n' 'penktas sestas' 'o o' 'r k';
+        /* grid-template-columns: repeat(4, 100px); */
+        /* grid-auto-rows: 150px; */
+        /* grid-template-rows: 200px 300px; */
+        /* align-items: center;
+    justify-content: center; */
+        /* grid-template-columns: minmax(150px, 250px); */
+        /* grid-gap: 30px;
+    grid-template-areas: 'header header header' 'sidebar content'; */
+    }
+    
+    .grid-item-1 {
+        grid-area: m;
+    }
+    
+    .grid-item-2 {
+        background-image: url('images/lower lake.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-area: a;
+        /* height: 200px; */
+        /* color: var(--title-color) */
+        color: #5c83ad;
+    }
+    
+    .grid-item-3 {
+        grid-area: b;
+    }
+    
+    .grid-item-4 {
+        grid-area: n;
+    }
+    
+    .grid-item-6 {
+        grid-area: sestas;
+        background-image: url('images/20181015_121430.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* height: 200px; */
+        /* grid-column:  1/ 3; */
+    }
+    
+    .grid-item-7 {
+        grid-area: o;
+    }
+    
+    .grid-item-8 {
+        background-image: url('images/upper lake.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-area: r;
+        /* height: 200px; */
+    }
+    
+    .items {
+        text-align: center;
+        border-radius: 15px;
+        background-color: var(--background-color);
+        color: var(--main-color)
+    }
+    
+    .nav-links {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        height: 300px;
+        position: relative;
+    }
+    /* item 1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 
+    
+     .item-1 {
+        display: flex;
+        flex-direction: column;
+       
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 300px;
+    }
+    
+    .link-item {
+        display: block;
+        background-color: #3f4537;
+        width: 300px;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 30px;
+        color: #ffff;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    .sub-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: -23px;
+        left: 132px;
+    }
+    
+    .sub-links a {
+        display: none;
+        background-color: #394b3d;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        width: 300px;
+        text-align: center;
+        color: #ffff;
+        font-size: 20px;
+        padding: 10px 0;
+        text-decoration: none;
+        list-style: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .item-1:hover .sub-links a:nth-child(1) {
+        display: block;
+    }
+    
+    .item-1:hover .sub-links a:nth-child(2) {
+        display: block;
+    }
+    
+    .item-1:hover .sub-links a:nth-child(3) {
+        display: block;
+    }
+    
+    .item-1:hover .sub-links a:nth-child(1):hover {
+        display: block;
+        background-color: #79b1e7;
+    }
+    
+    .item-1:hover .sub-links a:nth-child(2):hover {
+        background-color: #79b1e7;
+    }
+    
+    .item-1:hover .sub-links a:nth-child(3):hover {
+        background-color: #79b1e7;
+    }
+     item2  
+    
+    .item-2 {
+        display: flex;
+        flex-direction: column;
+      
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 300px;
+    }
+    
+    .sub-links2 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: -25px;
+        left: 695px;
+    }
+    
+    .sub-links2 a {
+        display: none;
+        border-top: 1px solid #fff;
+        background-color: #394b3d;
+        border-bottom: 1px solid #fff;
+        width: 300px;
+        text-align: center;
+        color: #ffff;
+        font-size: 20px;
+        padding: 10px 0;
+        text-decoration: none;
+        list-style: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .item-2:hover .sub-links2 a:nth-child(1) {
+        display: block;
+    }
+    
+    .item-2:hover .sub-links2 a:nth-child(2) {
+        display: block;
+    }
+    
+    .item-2:hover .sub-links2 a:nth-child(3) {
+        display: block;
+    }
+    
+    .item-2:hover .sub-links2 a:nth-child(1):hover {
+        display: block;
+        background-color: #79b1e7;
+    }
+    
+    .item-2:hover .sub-links2 a:nth-child(2):hover {
+        background-color: #79b1e7;
+    }
+    
+    .item-2:hover .sub-links2 a:nth-child(3):hover {
+        background-color: #79b1e7;
+    }
+    item3  
+    
+    .item-3 {
+        display: flex;
+        flex-direction: column;
+     
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 300px;
+    }
+    
+    .sub-links3 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: -23px;
+        right: 132px;
+    }
+    
+    .sub-links3 a {
+        display: none;
+        background-color: #394b3d;
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+        width: 300px;
+        text-align: center;
+        color: #ffff;
+        font-size: 20px;
+        padding: 10px 0;
+        text-decoration: none;
+        list-style: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .item-3:hover .sub-links3 a:nth-child(1) {
+        display: block;
+    }
+    
+    .item-3:hover .sub-links3 a:nth-child(2) {
+        display: block;
+    }
+    
+    .item-3:hover .sub-links3 a:nth-child(3) {
+        display: block;
+    }
+    
+    .item-3:hover .sub-links3 a:nth-child(1):hover {
+        display: block;
+        background-color: #79b1e7;
+    }
+    
+    .item-3:hover .sub-links3 a:nth-child(2):hover {
+        background-color: #79b1e7;
+    }
+    
+    .item-3:hover .sub-links3 a:nth-child(3):hover {
+        background-color: #79b1e7;
+    } */
+    /* Drop Meniu */
+    /* .nav-bar {
+    /*  */
+    /* FOOTER */
+    
+    footer {
+        /* background-image: url('images/middle lake.jpg'); */
+        background-color: #79b1e7;
+        margin: 0;
+    }
+    
+    .footer-text {
+        /* padding: 20px; */
+        margin: 0;
+    }
+    
+    .address {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--main-color)
+    }
+    
+    .address a {
+        text-decoration: none;
+        color: #ffff;
+    }
+    
+    .container-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 15px;
+        /* margin-bottom: 30px; */
+    }
+    
+    .footer-nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        list-style: none;
+    }
+    
+    .footer-nav ul li {
+        padding: 6px;
+    }
+    
+    .footer-nav a {
+        color: var(--main-color);
+        text-decoration: none;
+    }
+    /* 
+.dropdown {
+    display: block;
+}
+
+.drop-btn {
+    border: 1px solid red;
+    display: block;
+    font-size: 19px;
+}
+
+.drop-content {
+    display: none;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+.drop-content a {
+    text-decoration: none;
+    color: red;
+    display: block;
+}
+
+.drop-content a:hover {
+    background-color: blue;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+
+.dropdown:hover .drop-btn {
+    background-color: rgb(0, 255, 64);
+} */
